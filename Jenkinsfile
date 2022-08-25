@@ -11,14 +11,12 @@ pipeline{
             steps{
                 script{
                     def scannerHome = tool 'sonarqube-scanner';
-                    withSonarQubeEnv("sonarqube-container"){
+                    withSonarQubeEnv(credentialsId: 'sonarqube_access_token'){
                         sh "${tool("sonarqube-scanner")}/bin/sonar-scanner \
                         -Dsonar.projectKey=nodejs \
                         -Dsonar.sources=. \
                         -Dsonar.css.node=. \
                         -Dsonar.host.url=http://52.17.93.249:9000 \
-                        -Dsonar.login=admin \
-                        -Dsonar.password=abhi \
                         -Dsonar.login=sqp_0c97f7ef936ebaa1dd23b11199bbecfee8502f23"
                         
                     }
