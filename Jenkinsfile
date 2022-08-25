@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('code checkout from GitHub'){
             steps{
-                git 'https://github.com/Abhilash-1201/NodeJsBoilerplateCode.git'
+                git credentialsId: 'GitHub_token', url: 'https://github.com/Abhilash-1201/NodeJsBoilerplateCode.git'
             }
         }
         stage('Code Quality Check via SonarQube'){
