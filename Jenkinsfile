@@ -30,5 +30,20 @@ pipeline{
                 }
             }
         }
+      stage('Build A and B') {
+            failFast true
+            parallel {
+                stage('Build A') {
+                    steps {
+                            build job: "/var/lib/jenkins/NodeJs_Project1201/${env.BRANCH}", wait: true
+                    }
+                }
+                stage('Build B') {
+                    steps {
+                            build job: "/var/lib/jenkins/javaExample/${env.BRANCH}", wait: true
+                    }
+                }
+            }
+    }
     }
 }
