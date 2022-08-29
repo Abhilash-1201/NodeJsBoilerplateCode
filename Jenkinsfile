@@ -16,8 +16,8 @@ pipeline{
                         -Dsonar.projectKey=NodeJS-Project \
                         -Dsonar.sources=. \
                         -Dsonar.css.node=. \
-                        -Dsonar.host.url=http://3.249.54.238:9000 \
-                        -Dsonar.login=sqp_9b76513c1e63c0b16470e7d3b1beca88a2ef875c"
+                        -Dsonar.host.url=http://63.35.183.239:9000 \
+                        -Dsonar.login=sqp_5585d382150844cdcb1381d33673cb5855ce1fe9"
                         
                     }
                 }
