@@ -14,4 +14,3 @@ jobs:
         token: ${{ secrets.TOKEN }}
         job: "NodeJs_Project"
           
-      
