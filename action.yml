@@ -1,0 +1,29 @@
+name: 'Run Jenkins Job and get build result'
+description: 'Triggers Jenkins Job and get build result'
+author: 'Abhilash-1201'
+inputs:
+  jenkins_url:
+    required: true
+    description: 'Jenkins domain URL'
+  jenkins_user:
+    required: true
+    description: 'Jenkins username'
+  jenkins_token:
+    required: true
+    description: 'Jenkins API token that belongs to jenkins_user'
+  job_name:
+    required: true
+    description: 'Jenkins job to triggered and follow up'
+  job_params:
+    description: 'Jenkins build job parameters, encoded in JSON'
+    required: false
+outputs:
+  jenkins_job_url:
+    description: 'URL to the job details'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'check-circle'
+  color: 'green'
