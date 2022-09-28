@@ -12,6 +12,6 @@ jobs:
         url: "http://3.22.98.199:8080/"
         user: "admin"
         token: b9c9ae966cc673d3f50f23a8566dded8fcca8ba5bdbd3581338c6f7922d853b5
-        job: "nodejs"
+        job: "NodeJs_Project"
           
           
