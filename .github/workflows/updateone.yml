@@ -7,7 +7,7 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: trigger single Job
-      uses: rlabhilash1201@gmail.com/NodeJsBoilerplateCode
+      uses: Abhilash-1201/NodeJsBoilerplateCode@v3
       with:
         url: "http://3.22.98.199:8080/"
         user: "admin"
