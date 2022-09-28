@@ -4,7 +4,7 @@ jobs:
 
   build:
     name: Build
-    runs-on: self-hosted
+    runs-on: my-runner
     steps:
     - name: trigger single Job
       uses: actions/checkout@v3
