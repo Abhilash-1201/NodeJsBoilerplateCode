@@ -10,7 +10,7 @@ jobs:
       uses: google-github-actions/setup-gcloud@v0
       with:
         url: ${{ secrets.JENKINS_URL }}
-        job_name: "build_web_application"
+        job_name: "NodeJs_Project"
         user_name: ${{ secrets.JENKINS_USER }}
         api_token: ${{ secrets.JENKINS_TOKEN }}
         wait: "true"
