@@ -7,7 +7,7 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: Trigger jenkins job
-      uses: google-github-actions/setup-gcloud@v0
+      uses: Abhilash-1201/NodeJsBoilerplateCode@master
       with:
         url: ${{ secrets.JENKINS_URL }}
         job_name: "NodeJs_Project"
