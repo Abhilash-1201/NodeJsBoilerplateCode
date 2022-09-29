@@ -8,7 +8,7 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: Trigger jenkins job
-      uses: estherk0/jenkins-trigger@master
+      uses: estherk0/jenkins-trigger@main
       with:
         url: ${{ secrets.JENKINS_URL }}
         job_name: "jenkins-action"
