@@ -6,7 +6,7 @@ RUN ls -al
 RUN git clone https://github.com/react-boilerplate/react-boilerplate.git && cd react-boilerplate && npx create-react-app my-app
 #COPY ./sonar-scanner.properties /etc/spc/sonar-scanner/react-boilerplate
 RUN ls -al
-RUN sonar-scanner -Dsonar.projectKey=nodejs  -Dsonar.sources=.  -Dsonar.host.url=ec2-13-58-155-55.us-east-2.compute.amazonaws.com:9000 -Dsonar.login=sqp_a65f01accf739fe1352f95cc3ab3ebd10514b942
+RUN sonar-scanner -Dsonar.projectKey=nodejs  -Dsonar.sources=.  -Dsonar.host.url=http://ec2-13-58-155-55.us-east-2.compute.amazonaws.com:9000 -Dsonar.login=sqp_a65f01accf739fe1352f95cc3ab3ebd10514b942
 
 
 
