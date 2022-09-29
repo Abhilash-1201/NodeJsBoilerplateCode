@@ -10,7 +10,8 @@ jobs:
     - name: Trigger jenkins job
       uses: Abhilash-1201/NodeJsBoilerplateCode@master
       with:
-        jenkinsfile: "Abhilash-1201/NodeJsBoilerplateCode/Jenkinsfile"
+        command: run
+        jenkinsfile: Jenkinsfile
         url: ${{ secrets.JENKINS_URL }}
         job_name: "jenkins-action-two"
         user_name: ${{ secrets.JENKINS_USER }}
