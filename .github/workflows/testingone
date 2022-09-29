@@ -9,6 +9,8 @@ jobs:
     - name: Trigger jenkins job
       uses: Abhilash-1201/NodeJsBoilerplateCode@master
       with:
+        host: ${{ secrets.SONARQUBE_HOST }}
+        login: ${{ secrets.SONARQUBE_TOKEN }}
         url: ${{ secrets.JENKINS_URL }}
         job_name: "NodeJs_Project"
         user_name: ${{ secrets.JENKINS_USER }}
