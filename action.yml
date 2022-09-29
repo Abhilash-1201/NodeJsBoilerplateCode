@@ -21,7 +21,7 @@ outputs:
   jenkins_job_url:
     description: 'URL to the job details'
 runs:
-  using: 'jenkins'
+  using: 'node-16'
   image: 'Jenkinsfile'
   
 branding:
