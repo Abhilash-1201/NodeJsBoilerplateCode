@@ -11,7 +11,7 @@ jobs:
       uses: estherk0/jenkins-trigger@main
       with:
         url: ${{ secrets.JENKINS_URL }}
-        job_name: "jenkins-action-2"
+        job_name: "jenkins-action"
         user_name: ${{ secrets.JENKINS_USER }}
         api_token: ${{ secrets.JENKINS_TOKEN }}
         wait: "true"
