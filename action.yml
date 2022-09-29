@@ -22,7 +22,7 @@ outputs:
     description: 'URL to the job details'
 runs:
   using: 'node16'
-  image: 'Jenkinsfile'
+  image: 'app/app.js'
   
 branding:
   icon: 'check-circle'
