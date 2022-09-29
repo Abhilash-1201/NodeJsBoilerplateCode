@@ -11,6 +11,7 @@ jobs:
       with:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
+        
     - name: Trigger jenkins job
       uses: Abhilash-1201/NodeJsBoilerplateCode@master
       with:
