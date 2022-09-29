@@ -22,7 +22,8 @@ outputs:
     description: 'URL to the job details'
 runs:
   using: 'jenkins'
-  image: 'Jenkinsfile
+  image: 'Jenkinsfile'
+  
 branding:
   icon: 'check-circle'
   color: 'green'
