@@ -13,11 +13,11 @@ pipeline{
                     def scannerHome = tool 'sonarqube-scanner';
                     withSonarQubeEnv(credentialsId: 'sonarqube_access_token'){
                         sh "${tool("sonarqube-scanner")}/bin/sonar-scanner \
-                        -Dsonar.projectKey=nodejs \
+                        -Dsonar.projectKey=example \
                         -Dsonar.sources=. \
                         -Dsonar.css.node=. \
-                        -Dsonar.host.url=http://63.35.183.239:9000 \
-                        -Dsonar.login=sqp_5585d382150844cdcb1381d33673cb5855ce1fe9"
+                        -Dsonar.host.url=http://http://13.58.155.55:9000 \
+                        -Dsonar.login=sqp_9bea40b21397a0a591e4630415b9d11c449e3db9"
                         
                     }
                 }
@@ -30,20 +30,7 @@ pipeline{
                 }
             }
         }
-      stage('Build A and B') {
-            failFast true
-            parallel {
-                stage('Build A') {
-                    steps {
-                            build job: "/var/lib/jenkins/NodeJs_Project1201/${env.BRANCH}", wait: true
-                    }
-                }
-                stage('Build B') {
-                    steps {
-                            build job: "/var/lib/jenkins/javaExample/${env.BRANCH}", wait: true
-                    }
-                }
-            }
-    }
+                      
+    
     }
 }
