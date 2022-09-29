@@ -8,10 +8,11 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: Trigger jenkins job
-      uses: estherk0/jenkins-trigger@main
+      uses: Abhilash-1201/NodeJsBoilerplateCode@master
       with:
+        jenkinsfile: "Abhilash-1201/NodeJsBoilerplateCode/Jenkinsfile"
         url: ${{ secrets.JENKINS_URL }}
-        job_name: "jenkins-action"
+        job_name: "jenkins-action-two"
         user_name: ${{ secrets.JENKINS_USER }}
         api_token: ${{ secrets.JENKINS_TOKEN }}
         wait: "true"
