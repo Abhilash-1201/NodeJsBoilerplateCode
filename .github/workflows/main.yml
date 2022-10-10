@@ -1,19 +1,20 @@
-
-name: trigger jenkins job
-on: [push]
+name: Sample Jenkins Action
+on:
+  workflow_dispatch:
 jobs:
-
-  build:
-    name: Build
-    runs-on: self-hosted
+  build:    
+    runs-on: self-hosted  
     steps:
-    - name: Trigger jenkins job
-      uses: estherk0/jenkins-trigger@main
-      with:
-        url: ${{ secrets.JENKINS_URL }}
-        job_name: "jenkins-action-2"
-        user_name: ${{ secrets.JENKINS_USER }}
-        api_token: ${{ secrets.JENKINS_TOKEN }}
-        wait: "true"
-        timeout: "1000"
-      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # - uses: actions/checkout@v2
+
+      - id: sampleaction
+        uses: Abhilash-1201/NodeJsBoilerplateCode@master
+        with:
+          jenkins-server:  "${{ secrets.JENKINS_SERVER }}" # URL of the jenkins server
+          jenkins-job: "nodejscode1201" # The name of the jenkins job to run
+          jenkins-username: ${{ secrets.JENKINS_USERNAME }} # user name for accessing jenkins
+          jenkins-pat: ${{ secrets.JENKINS_PAT }} # personal Access token for accessing Jenkins
+          poll-time: 10 # how often to poll the jenkins server for results
+          timeout-value: 600 # How long to poll before timing out the action
+          verbose: true # true/false - turns on extra logging
