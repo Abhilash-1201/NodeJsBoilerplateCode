@@ -17,8 +17,7 @@ pipeline{
                         -Dsonar.sources=. \
                         -Dsonar.css.node=. \
                         -Dsonar.host.url=http://18.118.105.76:9000 \
-                        -Dsonar.login=sqp_86b34551fec5fd58fec56fda85686999fdf5f0dd"
-                        
+                        -Dsonar.login=sqp_86b34551fec5fd58fec56fda85686999fdf5f0dd"         
                     }
                 }
             }
