@@ -1,6 +1,6 @@
 name: Sample Jenkins Action
-on:
-  workflow_dispatch:
+on: [push]
+
 jobs:
   build:    
     runs-on: self-hosted  
