@@ -123,7 +123,13 @@ runs:
         #NOT_BUILT - Module was not build
         #ABORTED - Manually aborted
         #Short pause
-      shell: bash 
+      shell: bash
+outputs:
+  changes_detected:
+    description: Value is "true", if the repository was dirty and file changes have been detected. Value is "false", if no changes have been detected.
+  commit_hash:
+    description: Full hash of the created commit. Only present if the "changes_detected" output is "true".      
+      
 branding:
   icon: 'arrow-down-circle'
   color: 'gray-dark'
