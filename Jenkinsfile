@@ -1,9 +1,4 @@
 pipeline{
-    environment {
-    registry = "naistangz/docker_automation"
-    registryCredential = 'dockerhub'
-    dockerImage = ''
-    }
     agent any
     tools {nodejs "nodejs"}
     stages{
