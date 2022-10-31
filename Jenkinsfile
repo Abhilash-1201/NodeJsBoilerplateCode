@@ -1,4 +1,9 @@
 pipeline{
+    environment {
+    registry = "naistangz/docker_automation"
+    registryCredential = 'dockerhub'
+    dockerImage = ''
+    }
     agent any
     tools {nodejs "nodejs"}
     stages{
@@ -19,6 +24,14 @@ pipeline{
                 }
             }
         }
+      
+       stage('Building Docker Image') {
+         steps{
+           script{
+                sh "docker build -t ."
+           }
+         }
+       }
         stage('Install Project Dependencies'){
             steps{
                 nodejs(nodeJSInstallationName: 'nodejs'){
