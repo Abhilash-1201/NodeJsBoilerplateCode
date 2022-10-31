@@ -1,4 +1,9 @@
 pipeline{
+    environment {
+    registry = "abhilashrl1289/nodejs_repository"
+    registryCredential = 'dockerhub_id'
+    dockerImage = ''
+    }
     agent any
     tools {nodejs "nodejs"}
     stages{
@@ -20,10 +25,10 @@ pipeline{
             }
         }
       
-       stage('Building Docker Image') {
+       stage('Building our image')  {
          steps{
            script{
-                sh "docker build -t ."
+               dockerImage = docker.build registry + ":$BUILD_NUMBER"
            }
          }
        }
