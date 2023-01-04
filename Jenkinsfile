@@ -25,28 +25,28 @@ pipeline{
             }
         }
       
-       stage('Building docker image')  {
-         steps{
-           script{
-               dockerImage = docker.build registry + ":$BUILD_NUMBER"
-           }
-         }
-       }
-      stage('Deploy builded docker image') {
-          steps { 
-              script {
-                  docker.withRegistry( '', registryCredential ) {
-                      dockerImage.push()
-                  }
-              }
-          }
-      }
-        stage('Install Project Dependencies'){
-            steps{
-                nodejs(nodeJSInstallationName: 'nodejs'){
-                    sh "npm install"
-                }
-            }
-        }
+//       stage('Building docker image')  {
+//         steps{
+//           script{
+//               dockerImage = docker.build registry + ":$BUILD_NUMBER"
+//           }
+//         }
+//       }
+//      stage('Deploy builded docker image') {
+//          steps { 
+//              script {
+//                  docker.withRegistry( '', registryCredential ) {
+//                      dockerImage.push()
+//                  }
+//              }
+//          }
+//      }
+//        stage('Install Project Dependencies'){
+//            steps{
+//                nodejs(nodeJSInstallationName: 'nodejs'){
+//                    sh "npm install"
+//                }
+//            }
+//        }
     }
 }
